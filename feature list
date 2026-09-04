@@ -1,0 +1,39 @@
+# SpoolLogic: Local-First 3D Print Farm Queue & Shop Manager
+
+SpoolLogic is a browser-based, local-first 3D print shop environment and workflow manager designed to track printer queues, filament inventory, and operational costs. Scale your print farm production across unlimited machines without storing sensitive data or proprietary 3D designs in the cloud.
+
+[Start Your 14-Day Free Trial](https://spoollogic.streamlit.app)
+
+---
+
+## 🛠️ Automated 3D Printer Queue & Slicer Workflow
+Manage your daily workflows seamlessly with an intuitive 3D print shop dashboard built for hands-off environment tracking.
+* **Passive 3D Printer Queue Tracking:** Monitor queued, active, finished, and failed print workflows from a centralized local command center.
+* **Smart Load Balancing:** Maximize farm efficiency by automatically routing design files to the shortest available machine queue across your entire shop.
+* **Bambu Studio Queue Integration:** Effortlessly drag queued jobs directly into Bambu Studio or OrcaSlicer workflows.
+* **Automated 3MF File Metadata Import:** Auto-extract target print time, model name, and required filament weight instantly from your slicer files.
+* **Local Network Print Shop Monitor:** Track local network 3D printers passively in real-time using secure, lightweight MQTT integration layers.
+* **Desktop File Linking:** Link print files directly from your PC; full file paths display right on each active queue card.
+
+## 💰 3D Print Cost Calculator & Filament Inventory Analytics
+Eliminate manual spreadsheets with automated, native financial accounting and material tracking.
+* **Cost Calculator Without Spreadsheets:** Track exact material grams, machine uptime hours, labor, and waste percentages per job automatically.
+* **Profit & Margin Tracking:** Monitor print job profitability and business margins natively without leaving your dashboard.
+* **Filament Accounting & Inventory:** Manage live shelf stock with low-stock warnings, market prices, and live consumption tracking in both grams and dollars.
+* **Multi-Printer Filament Slot Tracking:** View real-time color and material configurations across active multi-material slots (like Bambu AMS setups).
+
+## 🔒 Browser-Based Privacy & Control
+Keep your competitive workflows completely secure with enterprise-grade data privacy.
+* **Local-First Storage:** Your queues, printer parameters, and historical logs stay securely cached on your local device—never on our cloud servers.
+* **Cloud-Light Architecture:** We only host basic login profiles and billing systems; your operational shop data never leaves your browser.
+* **Secure Export & Backup:** Seamlessly download your entire print shop configuration and job histories as an independent backup file anytime.
+
+---
+
+## 🚀 Get Started in 3 Steps
+1. Open **[spoollogic.streamlit.app](https://spoollogic.streamlit.app)**
+2. Create a free account
+3. Add your printers and start tracking your queues
+
+* **Pricing:** Unlimited printers, one plan: **$5.50/month** after your 14-day free trial (no credit card required).
+* **Support:** 3dprintingmanagemastertool@gmail.com
