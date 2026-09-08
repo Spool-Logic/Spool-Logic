@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://spool-logic.github.io/Spool-Logic/sitemap.xml
