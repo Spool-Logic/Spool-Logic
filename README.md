@@ -3,7 +3,7 @@ Spool Logic is a **3D printing queue and shop manager** for hobbyists, designers
 **[Try SpoolLogic (live app) →](https://spoollogic.streamlit.app/)**
 ## Documentation
 - [Feature list](feature%20list)
-- [Technical specifications] list — 464 capabilities](TECHNICAL_SPECIFICATIONS.md)
+- [Technical specifications](TECHNICAL_SPECIFICATIONS.md)
 ## Links
 | | URL |
 |---|---|
