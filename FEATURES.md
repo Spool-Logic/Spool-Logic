@@ -6,11 +6,11 @@ This is 3D printing software — unrelated to automotive turbo / diesel brands o
 
 [Start Your 14-Day Free Trial](https://spoollogic.streamlit.app)
 
-The same content lives in [FEATURES.md](FEATURES.md) (preferred) and on the public site: https://spool-logic.github.io/Spool-Logic/features.html
-
 ---
 
 ## Automated 3D printer queue & slicer workflow
+
+Manage daily shop workflow from one dashboard. This app tracks and plans — it does not replace your slicer or printer firmware.
 
 * **Passive 3D printer queue tracking:** Monitor queued, active, finished, and failed jobs. You set printer status in the app (running / finished / offline).
 * **Smart load balancing:** Route jobs to the shortest machine queue; balance and move work across printers.
@@ -20,7 +20,7 @@ The same content lives in [FEATURES.md](FEATURES.md) (preferred) and on the publ
 
 ## 3D print cost calculator & filament inventory
 
-* **Cost calculator without spreadsheets:** Material grams, machine hours, and waste multiplier per job.
+* **Cost calculator without spreadsheets:** Material grams, machine hours, and waste multiplier per job (Settings default plus optional per-job override).
 * **Lag-rate timeline:** Stretch calendar time for other tasks on Cost Analytics and Queue stats.
 * **Profit & margin tracking:** Enter revenue for a period against computed print costs.
 * **Filament accounting & inventory:** Shelf stock, past usage, switch recommendations, low-stock warnings (~100g).
@@ -35,11 +35,17 @@ The same content lives in [FEATURES.md](FEATURES.md) (preferred) and on the publ
 
 ---
 
+## Ten app sections
+
+Dashboard · Add Print · Queue Management · Multi-Printer Queues · Cost Analytics · Profit & Margins · Printer Management · Filament Management · Filament Accounting · Settings
+
 ## Get started in 3 steps
 
 1. Open **[spoollogic.streamlit.app](https://spoollogic.streamlit.app)**
 2. Create a free account
 3. Add your printers and start tracking your queues
 
-* **Pricing:** Unlimited printers, one plan: **$5.50/month** after your 14-day free trial.
+* **Pricing:** Unlimited printers, one plan: **$5.50/month** after your 14-day free trial. After trial, accounts are view-only until you subscribe.
 * **Support:** 3dprintingmanagemastertool@gmail.com
+* **Site:** https://spool-logic.github.io/Spool-Logic/
+* **Numbered spec:** [TECHNICAL_SPECIFICATIONS.md](TECHNICAL_SPECIFICATIONS.md)

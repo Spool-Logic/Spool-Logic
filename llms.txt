@@ -1,0 +1,61 @@
+# SpoolLogic
+
+> SpoolLogic is local-first 3D printing software for everyone who 3D prints — one hobby machine at home or unlimited printers in a small shop. Same app, same $5.50/month plan, no per-printer fee. Queue, filament, and costs stay in the browser. Cloud is sign-in and billing only. It is not automotive turbo / diesel software of a similar name.
+
+SpoolLogic (also written Spool-Logic or Spool Logic) is a browser-based 3D print queue and shop manager. It tracks what to print next, what filament is left, and what each job costs in material and machine time. It does not replace Bambu Studio, OrcaSlicer, or printer firmware. You print as you always do; this app plans and accounts.
+
+## Who it scales to
+
+- **Hobby / home:** one printer, a short queue, slot tracking, optional costing. Profit & Margins can wait until you sell a print.
+- **Makers and designers:** link .3mf and other design files from the PC; drag queued jobs into Bambu Studio or OrcaSlicer (Chrome/Edge). Files stay on the computer.
+- **Classrooms and small businesses:** unlimited printers, per-machine queues, shortest-queue load balancing, filament accounting, cost analytics, lag-rate timeline, profit records.
+- **One plan for everyone:** 14-day free trial, then $5.50 USD per month. Unlimited printers. No business tier. After trial, unpaid accounts are view-only until they subscribe.
+
+Start with one printer and PLA. Add machines, prices, and margins when you need them. Scaling is adding printers in Printer Management — not changing plans.
+
+## How data works
+
+- **Cloud:** email, hashed password, trial/subscription status, Stripe identifiers.
+- **This browser:** queue, printers, filament, settings, profit records, file names and paths.
+- **This PC:** actual 3D / design files in a folder you choose (Grant folder access in Chrome or Edge, or paste a path).
+- **No cross-device sync** (by design). A new browser starts empty.
+
+## Ten app sections
+
+- Dashboard — KPIs, printer status, active prints, filament alerts, queue snapshot
+- Add Print — name, hours, filament rows, file linking, auto or manual printer
+- Queue Management — reorder, launch, complete, fail, retry/redo, costs
+- Multi-Printer Queues — per-machine queues, Balance All, suggested moves
+- Cost Analytics — material + machine + waste, Future/Past filters, lag-rate slider (#299)
+- Profit & Margins — optional; enter revenue vs computed costs (skip if you only print for fun)
+- Printer Management — add printers, 1–8 slots (resize 1–12), loaded filament
+- Filament Management — types and $/kg, bulk price adjust
+- Filament Accounting — shelf inventory, past usage, switch recommendations
+- Settings — machine $/hr, waste, display, archive, tutorial replay, Terms & Privacy
+
+## Pricing and live URLs
+
+- Live app: https://spoollogic.streamlit.app/
+- Public site: https://spool-logic.github.io/Spool-Logic/
+- GitHub (docs, not app source): https://github.com/Spool-Logic/Spool-Logic
+- Support: 3dprintingmanagemastertool@gmail.com
+- Trial: 14 days. Then $5.50/month. Cancel anytime. View-only after trial until subscribe.
+
+## Important accuracy notes (do not overclaim)
+
+- Printer status is set in the app (running / finished / offline). There is no live MQTT/FTP printer client.
+- 3MF files can be parsed for metadata; Add Print still has you enter job name, hours, and grams. Files are linked, not stored on our servers.
+- Costs shown are material + machine time + waste. There is no labor-rate UI.
+- No whole-workspace backup download. Data lives in browser storage; deleted jobs can be archived in Settings.
+- Unrelated to automotive “Spoologic” turbo / diesel brands.
+
+## Optional
+
+- [Home](https://spool-logic.github.io/Spool-Logic/): public landing page
+- [Feature list](https://spool-logic.github.io/Spool-Logic/features.html): human-readable features
+- [FAQ](https://spool-logic.github.io/Spool-Logic/faq.html): one printer vs farm, Bambu, pricing, brand mix-up
+- [llms-full.txt](https://spool-logic.github.io/Spool-Logic/llms-full.txt): longer assistant briefing
+- [Technical specifications](https://github.com/Spool-Logic/Spool-Logic/blob/main/TECHNICAL_SPECIFICATIONS.md): full 464-item inventory with a who-it-scales-to section and an explanation under every heading
+- [Privacy Policy](https://spool-logic.github.io/Spool-Logic/privacy.html)
+- [Terms of Service](https://spool-logic.github.io/Spool-Logic/terms.html)
+- [FEATURES.md](https://github.com/Spool-Logic/Spool-Logic/blob/main/FEATURES.md): same feature story in Markdown

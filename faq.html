@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SpoolLogic FAQ — 3D print queue manager for everyone</title>
+  <meta name="description" content="FAQ for SpoolLogic 3D printing software: one hobby printer or unlimited machines, $5.50/month, local-first queues, Bambu Studio linking, filament and cost tracking. Not the diesel turbo brand." />
+  <link rel="canonical" href="https://spool-logic.github.io/Spool-Logic/faq.html" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="SpoolLogic FAQ — 3D print queue software" />
+  <meta property="og:description" content="Does it scale from one printer to a farm? Pricing, Bambu Studio, local-first data, and the diesel-brand mix-up." />
+  <meta property="og:url" content="https://spool-logic.github.io/Spool-Logic/faq.html" />
+  <meta property="og:image" content="https://spool-logic.github.io/Spool-Logic/og-image.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://spool-logic.github.io/Spool-Logic/og-image.svg" />
+  <link rel="stylesheet" href="css/site.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is SpoolLogic?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "SpoolLogic is local-first 3D printing software for everyone who 3D prints. It is a browser-based print queue and shop manager: queues, filament inventory, job costs, and Bambu Studio / OrcaSlicer file linking. It does not replace your slicer or printer firmware. It is not automotive turbo or diesel software of a similar name."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is SpoolLogic for one hobby printer or a print farm?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Both. The same app and the same $5.50/month plan cover one machine at home and unlimited printers in a small shop. There is no per-printer fee and no business tier. Start with one printer and PLA; add machines, costing, and margins when you need them."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I manage multiple 3D printers with SpoolLogic?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Add each printer in Printer Management. Multi-Printer Queues shows one queue per machine. Jobs can auto-assign to the shortest queue. Balance All Queues and suggested moves help when load drifts. You still start prints on the physical printer; the app tracks and plans."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does SpoolLogic cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "14-day free trial, then $5.50 per month. One plan, unlimited printers. After trial, unpaid accounts stay view-only until you subscribe. Cancel anytime through Stripe billing in the app."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where is my 3D print queue stored?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Queue, printers, filament, and settings stay in your browser on this device. Design files stay in a folder on your PC. The cloud stores only account sign-in and Stripe billing. There is no cross-device sync."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does SpoolLogic work with Bambu Lab, Bambu Studio, and OrcaSlicer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes as a workflow layer: AMS-style filament slots, .3mf linking, and drag from the queue into Bambu Studio or OrcaSlicer in Chrome or Edge. It does not replace Bambu Farm Manager, Bambu Studio, or printer firmware. Printer status in the app is running, finished, or offline — not a live MQTT driver."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I track filament inventory and print costs without a spreadsheet?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Filament Management stores $/kg. Slots track type, color, and remaining grams, with low-stock warnings around 100g. Cost Analytics uses material grams, machine hours, and a waste multiplier. Profit & Margins is optional if you sell prints."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is SpoolLogic the same as Spoologic turbo kits or Spoolman?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. SpoolLogic (Spool-Logic) is 3D print queue software. It is unrelated to automotive Spoologic diesel turbo parts, and it is not Spoolman or SpoolEase filament firmware projects."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="./">Spool<span>Logic</span></a>
+      <nav aria-label="Primary">
+        <a href="./">Home</a>
+        <a href="features.html">Feature list</a>
+        <a href="faq.html" aria-current="page">FAQ</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="https://spoollogic.streamlit.app/">Live app</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap" style="padding-top:2rem;padding-bottom:2.5rem;">
+    <p class="eyebrow">3D printing software · FAQ</p>
+    <h1>SpoolLogic questions</h1>
+    <p class="lead">Short answers for people (and search engines) deciding if this 3D print queue tool fits one machine at home or a small shop.</p>
+
+    <ul class="faq-list">
+      <li>
+        <h2>What is SpoolLogic?</h2>
+        <p>Local-first <strong>3D printing software</strong> for everyone who 3D prints: queue, filament, and costs in the browser. It does not replace your slicer. It is not automotive turbo software.</p>
+      </li>
+      <li>
+        <h2>Is it for one hobby printer or a print farm?</h2>
+        <p>Both. Same app, same <strong>$5.50/month</strong> plan, unlimited printers, no per-machine fee. Start with one printer; add more in Printer Management when you grow.</p>
+      </li>
+      <li>
+        <h2>How do I manage multiple 3D printers?</h2>
+        <p>Give each machine a queue. Auto-assign uses the shortest queue. Balance All and suggested moves help when one printer is overloaded. You still press print on the machine.</p>
+      </li>
+      <li>
+        <h2>How much does it cost?</h2>
+        <p>14-day free trial, then $5.50/month. After trial, view-only until you subscribe. Stripe handles payment.</p>
+      </li>
+      <li>
+        <h2>Where is my print queue stored?</h2>
+        <p>In this browser, on this device. Files stay on your PC. Cloud is login and billing only. A new browser starts empty (by design).</p>
+      </li>
+      <li>
+        <h2>Does it work with Bambu Lab / Bambu Studio / OrcaSlicer?</h2>
+        <p>Yes as a queue and file-link layer (AMS-style slots, .3mf, drag into the slicer in Chrome/Edge). Not a live network driver and not Bambu Farm Manager.</p>
+      </li>
+      <li>
+        <h2>Can I track filament and costs without a spreadsheet?</h2>
+        <p>Yes: $/kg, slot grams, ~100g warnings, material + machine time + waste, optional profit records. Lag-rate slider stretches the timeline if you are not printing 24/7.</p>
+      </li>
+      <li>
+        <h2>Is this Spoologic turbo kits or Spoolman?</h2>
+        <p>No. This is SpoolLogic 3D print queue software (GitHub: Spool-Logic). Unrelated to diesel turbo brands and unrelated to Spoolman/SpoolEase.</p>
+      </li>
+    </ul>
+
+    <p class="cta-row">
+      <a class="cta" href="https://spoollogic.streamlit.app/">Try the live app</a>
+      <a class="cta cta-secondary" href="features.html">Feature list</a>
+    </p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <nav aria-label="Footer">
+        <a href="./">Home</a>
+        <a href="features.html">Features</a>
+        <a href="faq.html" aria-current="page">FAQ</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="llms.txt">For AI</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

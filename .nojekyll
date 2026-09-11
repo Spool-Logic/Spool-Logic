@@ -1,0 +1,1 @@
+# Skip Jekyll so HTML, CSS, and extensionless files are served as-is.

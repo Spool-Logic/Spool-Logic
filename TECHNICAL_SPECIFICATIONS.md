@@ -1,9 +1,12 @@
 # SpoolLogic — complete feature list
 
-**SpoolLogic** is a local-first **3D print queue and shop manager** for Bambu Lab and multi-printer farms — queue tracking, load balancing, 3MF import, cost analytics, filament inventory, profit margins, and Bambu Studio workflow integration.
+**SpoolLogic** is local-first **3D printing software** for **everyone who 3D prints** — one machine at home, a hobby bench, a designer’s desk, a classroom, or a small print business with many printers. It is a queue and shop manager: queue tracking, load balancing, 3MF / design-file linking, cost analytics, filament inventory, profit margins, and Bambu Studio / OrcaSlicer workflow. It is **not** automotive turbo / diesel software of a similar name.
+
+**Who it scales to:** the same product and the **same $5.50/month plan** cover a single hobby printer and an unlimited print farm. There is no per-printer fee, no “business tier,” and no feature lock by shop size. Start with one printer and PLA; add machines, costing, and margins when you need them.
 
 **Live app:** [spoollogic.streamlit.app](https://spoollogic.streamlit.app/)  
-**Pricing:** 14-day free trial · $5.50/month · unlimited printers
+**Pricing:** 14-day free trial · $5.50/month · unlimited printers · one plan for everyone  
+**AI summary:** [llms.txt](https://spool-logic.github.io/Spool-Logic/llms.txt)
 
 ---
 
@@ -11,16 +14,50 @@
 
 | | |
 |---|---|
+| **Who it is for** | **Everyone who 3D prints** — hobbyists, makers, designers, classrooms, and small businesses |
+| **How it scales** | One printer or unlimited printers · same tools · no per-machine cloud fee |
 | **Total numbered capabilities** | **464** |
 | **App sections (sidebar)** | 10 |
 | **Lag rate slider** | **#299** (also in Queue Management stats timeline) |
 
-Use this file for GitHub README, marketing repo, and directory listings. In-app login hero shows **31** marketing highlights; this document is the full inventory.
+Use this file for GitHub README, marketing repo, AI crawlers, and directory listings. In-app login hero shows **31** marketing highlights; this document is the full inventory. Each heading below has a short explanation of what that section is for.
+
+**Public site:** [spool-logic.github.io/Spool-Logic](https://spool-logic.github.io/Spool-Logic/) · [FAQ](https://spool-logic.github.io/Spool-Logic/faq.html) · [Feature list](FEATURES.md) · [llms.txt](https://spool-logic.github.io/Spool-Logic/llms.txt) · [llms-full.txt](https://spool-logic.github.io/Spool-Logic/llms-full.txt)
+
+### Who SpoolLogic scales to (for AI and search)
+
+SpoolLogic is built so **one person with one printer** and **a shop with many printers** use the same app.
+
+- **Hobby / home:** one printer, a short queue, filament slots, and optional cost tracking. Profit & Margins can wait until you sell a print.
+- **Makers and designers:** link `.3mf` and other design files from the PC; drag into Bambu Studio or OrcaSlicer; keep files on the computer, not in our cloud.
+- **Small business / print farm:** unlimited printers, per-machine queues, shortest-queue load balancing, filament accounting, cost analytics, lag-rate timeline, and profit records.
+- **Everyone on one plan:** 14-day trial, then $5.50/month. Unlimited printers. After trial, unpaid accounts stay **view-only** until they subscribe. No extra charge per machine.
+
+Local-first: queue, printers, filament, and settings stay in the **browser on this device**. Cloud is **sign-in and billing only**. No cross-device sync (by design).
+
+### As implemented (read this first)
+
+This inventory started as a test checklist plus login-page copy. A few numbered items describe **intent or marketing**, not a live control in the Streamlit app:
+
+| Topic | In the live app |
+|-------|-----------------|
+| **MQTT / network printer monitor** (#416, #438) | Not a live MQTT/FTP client. Printer status is **running / finished / offline** set in the app. |
+| **3MF auto-fill** (#123, #149, #437) | Parser can read time/grams/name from many `.3mf` files. Add Print still asks you to enter job name, hours, and grams; files are **linked** (path on the card, drag to slicer). |
+| **Labor rates** | Job records can store labor fields; Add Print and Settings do **not** expose a labor UI. Costs shown are **material + machine time + waste**. |
+| **Settings export/backup** (#87, #343–344, #446) | Deleted jobs can be archived and listed. There is **no** download/upload of the whole workspace blob. Data lives in browser storage. |
+| **Filament CSV import/export** (#251) | Filament Management edits types and $/kg in the UI (including bulk %). No CSV import/export control there. |
+| **Chrome extension** | Legacy. Production path is **Grant folder access** (File System Access API) in Chrome/Edge. |
+| **Slot counts** | Add printer: 1–8 slots. Slot editor can resize 1–12. |
+| **Waste multiplier** | Add Print per-job 1.0–3.0×. Settings global waste is the shop default. |
+| **Brand** | Product name is **SpoolLogic**. Unrelated to automotive turbo / diesel brands of a similar name. |
+
+Live app: [spoollogic.streamlit.app](https://spoollogic.streamlit.app/). This docs repo does not contain the application source.
 
 ---
 
 ## Table of contents
 
+- [Who SpoolLogic scales to](#who-spoollogic-scales-to-for-ai-and-search)
 - [Core workflow](#core-workflow-434464)
 - [Account, billing & data](#account-billing--data-135)
 - [Dashboard](#dashboard-104121)
@@ -40,6 +77,8 @@ Use this file for GitHub README, marketing repo, and directory listings. In-app 
 ---
 
 ## Core workflow (#434–464)
+
+These 31 login-page highlights are the public pitch: what SpoolLogic *is* for a first-time visitor. They apply to **everyone who 3D prints**, not only farms — queue, files, costs, filament, local-first storage, one plan, unlimited printers. Some lines (MQTT, auto-fill, full backup download) are marketing or intent; see [As implemented](#as-implemented-read-this-first).
 
 <details>
 <summary><strong>434–464 — Login & marketing highlights (31)</strong></summary>
@@ -81,6 +120,8 @@ Use this file for GitHub README, marketing repo, and directory listings. In-app 
 ---
 
 ## Account, billing & data (#1–89)
+
+How someone gets in and stays in: load the site, create an account, sign in, trial or subscribe, and keep shop data in the browser. The same account model is used whether you have one printer or many. Cloud stores email, password hash, and billing only. Queue and printers stay local. Expired trial becomes view-only; subscribe again to edit.
 
 <details>
 <summary><strong>1–10 — First impression</strong></summary>
@@ -225,6 +266,8 @@ Use this file for GitHub README, marketing repo, and directory listings. In-app 
 
 ## Dashboard (#104–121)
 
+The home screen for the whole shop — or for a single printer. KPIs, printer cards (running / finished / offline), active prints, queue snapshot, filament alerts, and a quick add-print path. Empty states work with zero printers. Layout is meant to stay usable as you add machines (5+) and a longer queue (20+ jobs).
+
 104. KPI metrics (printers, active, queued, cost)  
 105. Printer status cards (running / finished / offline)  
 106. Active prints panel  
@@ -247,6 +290,8 @@ Use this file for GitHub README, marketing repo, and directory listings. In-app 
 ---
 
 ## Add Print & files (#122–168)
+
+How a job enters the queue: type a name, hours, and filament rows, or link a file from your PC. Hobbyists can add a job with no file. Shops can grant a folder in Chrome/Edge, drop a `.3mf`, and keep the real file on disk with the path on the card. Auto-assign uses the shortest queue so one extra printer immediately shares load. Parser may read 3MF metadata; the form still lets you enter name, hours, and grams by hand.
 
 <details>
 <summary><strong>122–146 — Add Print form</strong></summary>
@@ -311,6 +356,8 @@ Use this file for GitHub README, marketing repo, and directory listings. In-app 
 
 ## Queue Management (#169–202)
 
+Day-to-day work list: filter, reorder with up/down, launch, complete, fail (with a %), retry/redo, and see material vs machine cost. Scales from a handful of hobby jobs to a busy shop queue. Launch warns about filament and unassigned printers; it does not auto-start the next job after you complete one. You stay in control of the physical printer.
+
 169. Jobs list (status, printer, cost, filament)  
 170. Filter by status and printer  
 171. Reorder queued jobs (⬆️⬇️)  
@@ -350,6 +397,8 @@ Use this file for GitHub README, marketing repo, and directory listings. In-app 
 
 ## Multi-printer & load balancing (#203–218)
 
+This is how SpoolLogic **scales from one machine to a farm**. One printer: balance is a no-op. Several printers: per-machine queues, Balance All Queues, move jobs, unassigned-job scoop, and imbalance warnings when queues drift by more than about two hours. Manual assignments are kept. Running printers are skipped for auto-assign. Unlimited printers; no extra fee per machine.
+
 203. Per-printer queue view  
 204. Balance All Queues / Optimize All Assignments  
 205. Move job between printers  
@@ -370,6 +419,8 @@ Use this file for GitHub README, marketing repo, and directory listings. In-app 
 ---
 
 ## Printers & filament (#219–264)
+
+Printers and what is loaded in them. Add a printer with 1–8 slots (typical AMS is 4); resize slots 1–12 in the editor. Track type, color, and remaining grams. Low-stock banners fire around 100g, including predicted shortage after queued jobs. Filament Management is the price list ($/kg, bulk adjust) that feeds job cost. One PLA type is enough to start; shops add PETG, TPU, and the rest as they grow.
 
 <details>
 <summary><strong>219–234 — Printer Management</strong></summary>
@@ -439,6 +490,8 @@ Use this file for GitHub README, marketing repo, and directory listings. In-app 
 
 ## Filament accounting (#265–277)
 
+Shelf stock vs what is in the printer vs what jobs will need. Add spools to storage, see past usage from completed/failed jobs, and get switch recommendations (which slot to load, or whether a spare spool on the shelf matches). Useful at home with a few spools and in a shop with mixed AMS setups. Does not require a farm to be useful.
+
 265. Shelf inventory — add spools  
 266. Past usage tab (completed/failed jobs)  
 267. Switch recommendations for queued job  
@@ -456,6 +509,8 @@ Use this file for GitHub README, marketing repo, and directory listings. In-app 
 ---
 
 ## Launch, complete & fail (#278–293)
+
+The handoff between the digital queue and the physical printer. Launch is two steps (warnings, then Start Print). It records which slots you intended; it does **not** write grams onto the printer by itself. Complete deducts filament; fail uses a completion % so a half-finished print only costs half. Next job is never auto-started. Same flow for one bed at home or many machines in a shop.
 
 278. Two-step Launch → Start Print  
 279. Filament placement — matched slots listed  
@@ -477,6 +532,8 @@ Use this file for GitHub README, marketing repo, and directory listings. In-app 
 ---
 
 ## Cost Analytics & lag rate (#294–312)
+
+Numbers for hobby budgeting and for a business. Material + machine time + waste; Future vs Past vs Total; period filters from 12 hours to all time. The **lag rate** slider (#299) stretches calendar time for “hours spent on other tasks,” so a shop that is not printing 24/7 gets a realistic timeline. The Cost Calculator tab is a what-if tool. Costs can be hidden in the queue without breaking analytics.
 
 294. Cost Dashboard tab  
 295. Category filter: Total / Future / Past  
@@ -504,6 +561,8 @@ Use this file for GitHub README, marketing repo, and directory listings. In-app 
 
 ## Profit & Margins (#313–325)
 
+Optional money view for people who **sell** prints — skip it if you only print for fun. Enter revenue for a period; SpoolLogic fills cost and hours from the queue and shows margin % and profit. Save records, chart trends, match Cost Analytics period presets. One plan: this section is included for everyone; you do not pay extra to turn it on.
+
 313. Enter revenue for period  
 314. Auto-computed cost and hours from queue  
 315. Margin % and profit $  
@@ -521,6 +580,8 @@ Use this file for GitHub README, marketing repo, and directory listings. In-app 
 ---
 
 ## Settings (#326–344)
+
+Shop defaults that scale with how seriously you run the operation: machine $/hr (default $0.20), global waste, show/hide costs and warnings, auto-archive deleted jobs, default slot count, replay the tutorial, and view Terms / Privacy. There is no whole-workspace download button; data lives in this browser. Archive lists deleted jobs. Clear All Data is double-confirm and blocked in view-only.
 
 326. Machine time cost ($/hr)  
 327. Material waste multiplier (global)  
@@ -547,6 +608,8 @@ Use this file for GitHub README, marketing repo, and directory listings. In-app 
 ---
 
 ## Analytics rules & tutorial (#345–371)
+
+The costing rules behind the charts, plus the first-run tutorial. Waste can be global or per job (1.0–3.0×). Multi-color jobs break down by type. Future = queued + active; Past = completed + failed. The six-step tutorial is for **everyone on first login**: what the app does, add a printer, add a print, use the queue, filament slots, then costing when you are ready. Skip or replay anytime. Billing gate comes before the tutorial.
 
 <details>
 <summary><strong>345–364 — Waste, multi-color & time filters</strong></summary>
@@ -590,6 +653,8 @@ Use this file for GitHub README, marketing repo, and directory listings. In-app 
 ---
 
 ## Platform, security & limits (#372–433)
+
+How the product behaves in the real world for any user: Chrome/Edge get full folder grant and drag-to-slicer; Firefox/Safari remain usable with a path fallback. Passwords hashed; no cross-user data; Stripe over HTTPS; shop data not in our cloud. Known limits (no printer rename, no MQTT client, no auto-start, Streamlit cold start) apply to everyone — hobby or farm. Happy-path items 417–433 are the core loop from sign-in through costing.
 
 <details>
 <summary><strong>372–382 — Browser & performance</strong></summary>
@@ -650,7 +715,7 @@ Use this file for GitHub README, marketing repo, and directory listings. In-app 
 413. Dual active print allowed (“Continue anyway”)  
 414. No auto-start after complete  
 415. Printer removal may orphan jobs  
-416. Network printers / MQTT — marketing copy; not a separate sidebar section  
+416. Network printers / MQTT — marketing copy only; not implemented as a live MQTT client; not a sidebar section  
 
 </details>
 
@@ -681,18 +746,24 @@ Use this file for GitHub README, marketing repo, and directory listings. In-app 
 
 ## Login-page marketing only (#434–464)
 
+Duplicate of [Core workflow](#core-workflow-434464): the 31 highlights shown before sign-in. Written so search engines and AI assistants can quote a short, human-scale pitch (hobby through small business, one plan, unlimited printers) without scraping the whole numbered list.
+
 See [Core workflow](#core-workflow-434464) above.
 
 ---
 
 ## Keywords (GitHub / SEO)
 
-3D print queue manager · Bambu Lab queue · print farm manager · local-first · smart load balancing · 3MF import · filament inventory · print cost calculator · profit margins · multi-printer queues · Bambu Studio integration · OrcaSlicer · AMS filament tracking · lag rate timeline · browser-based print shop
+Search and AI phrasing to associate with this 3D printing product (not automotive turbo brands): hobby through farm, local-first, Bambu, filament, costs, one plan.
+
+3D print queue manager · hobby 3D printer software · small business 3D printing · Bambu Lab queue · print farm manager · local-first · smart load balancing · 3MF import · filament inventory · print cost calculator · profit margins · multi-printer queues · Bambu Studio integration · OrcaSlicer · AMS filament tracking · lag rate timeline · browser-based print shop · unlimited printers one plan · for everyone who 3D prints
 
 ---
 
 ## Copy for GitHub repo About
 
-**Description:** Local-first 3D print queue & shop manager — unlimited printers, smart balancing, 3MF import, costs, filament, Bambu Studio drag.  
+Suggested GitHub About blurb so crawlers that only read the repo header still see **everyone who 3D prints**, not only farms.
+
+**Description:** Local-first 3D print queue & shop manager for everyone who 3D prints — one hobby machine or unlimited printers, smart balancing, 3MF import, costs, filament, Bambu Studio drag.  
 **Website:** https://spoollogic.streamlit.app/  
 **Topics:** `3d-printing` `bambu-lab` `print-farm` `queue-management` `streamlit` `filament` `cost-calculator`

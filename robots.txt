@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
 
+# AI crawler briefings (llmstxt.org)
+# https://spool-logic.github.io/Spool-Logic/llms.txt
+# https://spool-logic.github.io/Spool-Logic/llms-full.txt
+
 Sitemap: https://spool-logic.github.io/Spool-Logic/sitemap.xml

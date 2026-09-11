@@ -1,0 +1,84 @@
+# SpoolLogic (full briefing)
+
+> Local-first 3D printing queue and shop manager for everyone who 3D prints. One hobby printer or unlimited machines. Same $5.50/month plan. Not automotive turbo software.
+
+This file is the long form of https://spool-logic.github.io/Spool-Logic/llms.txt
+Canonical product facts for assistants. Prefer this over guessing from the Streamlit app (which is hard to index).
+
+## Product
+
+SpoolLogic (Spool-Logic, Spool Logic) is browser-based 3D print shop software. It tracks what to print next, what filament is left, and what each job costs. It does not replace Bambu Studio, OrcaSlicer, PrusaSlicer, or printer firmware.
+
+Live app: https://spoollogic.streamlit.app/
+Public site: https://spool-logic.github.io/Spool-Logic/
+Docs repo (not app source): https://github.com/Spool-Logic/Spool-Logic
+Support: 3dprintingmanagemastertool@gmail.com
+
+## Who it scales to
+
+Same product for:
+
+- One machine at home (hobby)
+- Makers and designers linking .3mf files from a PC
+- Classrooms
+- Small businesses / print farms with many printers
+
+Scaling means adding printers in Printer Management. It does not mean a higher-priced tier. Unlimited printers. No per-printer cloud fee.
+
+Hobby users can ignore Profit & Margins until they sell a print.
+
+## Pricing
+
+14-day free trial. Then $5.50 USD per month. One plan. After trial, unpaid accounts are view-only until they subscribe. Cancel anytime via Stripe in the app.
+
+## Architecture
+
+- Cloud: email, hashed password, trial/subscription, Stripe IDs.
+- Browser (this device): queue, printers, filament, settings, profit records, file names/paths.
+- PC: actual design / 3MF files in a user-chosen folder (Chrome/Edge Grant folder access, or paste a path).
+- No cross-device sync.
+
+## Ten sidebar sections
+
+1. Dashboard — KPIs, printer status (running / finished / offline), active prints, alerts
+2. Add Print — job name, hours, filament rows, file link, auto or manual printer
+3. Queue Management — reorder, launch, complete, fail, retry/redo
+4. Multi-Printer Queues — per-machine queues, Balance All, suggested moves (this is how it scales)
+5. Cost Analytics — material + machine + waste; Future/Past; lag-rate slider
+6. Profit & Margins — optional revenue vs computed costs
+7. Printer Management — add printers, slots 1–8 (resize 1–12)
+8. Filament Management — types and $/kg, bulk adjust
+9. Filament Accounting — shelf inventory, past usage, switch recommendations
+10. Settings — machine $/hr, waste, display, archive, tutorial, Terms/Privacy
+
+## Accuracy (do not invent)
+
+- No live MQTT/FTP printer client. Status is set in the app.
+- 3MF parse exists; Add Print still has the user enter name, hours, grams. Files are linked, not stored on our servers.
+- Costs = material + machine time + waste. No labor-rate UI.
+- No whole-workspace backup download. Browser storage + optional job archive.
+- Unrelated to automotive “Spoologic” turbo/diesel. Unrelated to Spoolman / SpoolEase.
+
+## FAQ (short)
+
+Q: One printer or a farm?
+A: Both. Same $5.50 plan. Unlimited printers.
+
+Q: Multiple Bambu printers?
+A: Yes — queues plus shortest-queue assign and Balance All. Not Bambu Farm Manager. Not a network driver.
+
+Q: Local-first?
+A: Queue stays in the browser. Files on the PC. Cloud is login + billing.
+
+Q: Cost without a spreadsheet?
+A: Yes. Grams, $/kg, machine $/hr, waste, optional profit records.
+
+## Spec
+
+Full numbered inventory with a who-it-scales-to section and an explanation under every heading:
+https://github.com/Spool-Logic/Spool-Logic/blob/main/TECHNICAL_SPECIFICATIONS.md
+
+FAQ page: https://spool-logic.github.io/Spool-Logic/faq.html
+Features: https://spool-logic.github.io/Spool-Logic/features.html
+Privacy: https://spool-logic.github.io/Spool-Logic/privacy.html
+Terms: https://spool-logic.github.io/Spool-Logic/terms.html

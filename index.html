@@ -4,44 +4,243 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>SpoolLogic — 3D Print Queue, Filament &amp; Cost Manager</title>
-  <meta name="description" content="SpoolLogic is a local-first 3D print queue and shop manager for hobbyists, makers, and small businesses. Multi-printer queues, 3MF import, filament inventory, cost analytics, and Bambu Lab workflow support." />
-<meta name="google-site-verification" content="V5cNa2lFgBvPT-PLfeONxjAhbhvVq09JioykmrJnUzQ" />
+  <meta name="description" content="SpoolLogic is local-first 3D printing software for everyone who 3D prints — one hobby printer or unlimited machines on the same $5.50/month plan. Queues, filament, costs, Bambu Studio linking. Data stays in your browser." />
+  <meta name="google-site-verification" content="V5cNa2lFgBvPT-PLfeONxjAhbhvVq09JioykmrJnUzQ" />
+  <meta name="keywords" content="SpoolLogic, Spool-Logic, 3D print queue manager, Bambu Lab queue, print farm software, filament inventory, 3MF import, local-first 3D printing, print cost calculator" />
   <link rel="canonical" href="https://spool-logic.github.io/Spool-Logic/" />
-  <style>
-    body { font-family: system-ui, sans-serif; max-width: 42rem; margin: 2rem auto; padding: 0 1rem; line-height: 1.55; color: #1a1a1a; }
-    h1 { font-size: 1.75rem; margin-bottom: 0.25rem; }
-    .lead { color: #334155; font-size: 1.05rem; }
-    .cta { display: inline-block; margin: 1.25rem 0; padding: 0.75rem 1.25rem; background: #1e6f4f; color: #fff; text-decoration: none; border-radius: 8px; font-weight: 600; }
-    .cta:hover { background: #2d9a68; }
-    ul { padding-left: 1.25rem; }
-    a { color: #1e6f4f; }
-    footer { margin-top: 2rem; font-size: 0.9rem; color: #64748b; }
-  </style>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="SpoolLogic — 3D Print Queue &amp; Shop Manager" />
+  <meta property="og:description" content="Local-first 3D printing software: smart queues, filament slots, costs, and Bambu Studio / OrcaSlicer file linking. 14-day trial, then $5.50/month." />
+  <meta property="og:url" content="https://spool-logic.github.io/Spool-Logic/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SpoolLogic — 3D Print Queue &amp; Shop Manager" />
+  <meta name="twitter:description" content="Local-first 3D print queue, filament inventory, and cost manager for everyone who 3D prints." />
+  <meta property="og:image" content="https://spool-logic.github.io/Spool-Logic/og-image.svg" />
+  <meta name="twitter:image" content="https://spool-logic.github.io/Spool-Logic/og-image.svg" />
+  <link rel="stylesheet" href="css/site.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "SpoolLogic",
+    "alternateName": ["Spool-Logic", "Spool Logic"],
+    "applicationCategory": "BusinessApplication",
+    "applicationSubCategory": "3D printing queue and shop manager",
+    "operatingSystem": "Web browser",
+    "url": "https://spoollogic.streamlit.app/",
+    "sameAs": [
+      "https://github.com/Spool-Logic/Spool-Logic",
+      "https://spool-logic.github.io/Spool-Logic/"
+    ],
+    "description": "Local-first 3D print queue and shop manager for everyone who 3D prints — hobbyists, makers, classrooms, and small businesses. One plan, unlimited printers, no per-machine fee. Multi-printer load balancing, filament inventory, cost analytics, profit tracking, and Bambu Studio / OrcaSlicer file linking. Shop data stays in the browser; cloud is sign-in and billing only.",
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "Everyone who 3D prints — hobby, home, classroom, and small print business"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "5.50",
+      "priceCurrency": "USD",
+      "description": "14-day free trial, then $5.50 per month. Unlimited printers. One plan."
+    },
+    "featureList": [
+      "Dashboard",
+      "Add Print",
+      "Queue Management",
+      "Multi-Printer Queues",
+      "Cost Analytics",
+      "Profit & Margins",
+      "Printer Management",
+      "Filament Management",
+      "Filament Accounting",
+      "Settings"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "SpoolLogic",
+    "alternateName": ["Spool-Logic", "Spool Logic 3D printing"],
+    "url": "https://spool-logic.github.io/Spool-Logic/",
+    "description": "Public site for SpoolLogic 3D print queue software. Live app at spoollogic.streamlit.app.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "SpoolLogic",
+      "url": "https://spool-logic.github.io/Spool-Logic/"
+    }
+  }
+  </script>
 </head>
 <body>
-  <h1>SpoolLogic</h1>
-  <p class="lead">Local-first 3D print queue and shop manager — multi-printer queues, 3MF import, filament inventory, cost analytics, and profit tracking for hobbyists, designers, and small print businesses.</p>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="./">Spool<span>Logic</span></a>
+      <nav aria-label="Primary">
+        <a href="#scale">Who it's for</a>
+        <a href="#features">Features</a>
+        <a href="#sections">App sections</a>
+        <a href="#data">Local-first</a>
+        <a href="#pricing">Pricing</a>
+        <a href="features.html">Feature list</a>
+        <a href="faq.html">FAQ</a>
+        <a href="llms.txt">For AI</a>
+        <a href="https://spoollogic.streamlit.app/">Live app</a>
+      </nav>
+    </div>
+  </header>
 
-  <p><a class="cta" href="https://spoollogic.streamlit.app/">Try SpoolLogic — live app</a></p>
+  <main>
+    <div class="wrap hero">
+      <p class="eyebrow">3D printing software · not automotive / turbo parts</p>
+      <h1>3D print queue &amp; shop manager for everyone who 3D prints</h1>
+      <p class="lead">SpoolLogic scales from one hobby printer to an unlimited shop on the same plan. Track queues, filament, and costs in the browser. No per-machine cloud fee. Design files stay on your PC.</p>
+      <div class="cta-row">
+        <a class="cta" href="https://spoollogic.streamlit.app/">Try SpoolLogic — live app</a>
+        <a class="cta cta-secondary" href="features.html">Read the feature list</a>
+      </div>
+      <p class="fine">Sign-in in the cloud · Print data saves in this browser on this device · 14-day free trial, then $5.50/month</p>
+    </div>
 
-  <h2>What it does</h2>
-  <ul>
-    <li>Smart multi-printer print queues and load balancing</li>
-    <li>3MF import with time, grams, and model name extraction</li>
-    <li>Filament slot tracking, low-stock warnings, and inventory</li>
-    <li>Cost, profit, and margin analytics for your shop</li>
-    <li>Local-first data — queue and settings stay in your browser</li>
-  </ul>
+    <section class="wrap" id="scale">
+      <h2>Built to scale to everyone</h2>
+      <p class="fine" style="margin-top:-0.35rem;margin-bottom:1rem;">Same app. Same plan. One printer or a farm. No per-machine fee.</p>
+      <div class="grid">
+        <article class="card">
+          <h3>Hobby / home</h3>
+          <p>One printer, a short queue, filament slots, optional costing. Ignore Profit &amp; Margins until you sell a print.</p>
+        </article>
+        <article class="card">
+          <h3>Makers &amp; designers</h3>
+          <p>Link files from your PC. Drag into Bambu Studio or OrcaSlicer. Designs stay on your computer, not in our cloud.</p>
+        </article>
+        <article class="card">
+          <h3>Shop / print farm</h3>
+          <p>Unlimited printers, load balancing, filament accounting, lag-rate timeline, and profit records — still $5.50/month.</p>
+        </article>
+      </div>
+    </section>
 
-  <h2>Project links</h2>
-  <ul>
-    <li><a href="https://spoollogic.streamlit.app/">Live app (Streamlit)</a></li>
-    <li><a href="https://github.com/Spool-Logic/Spool-Logic">GitHub repository — docs &amp; specs</a></li>
-    <li><a href="https://github.com/Spool-Logic/Spool-Logic/blob/main/TECHNICAL_SPECIFICATIONS.md">Technical specifications</a></li>
-  </ul>
+    <section class="wrap" id="features">
+      <h2>What it does</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Passive 3D printer queue tracking</h3>
+          <p>Monitor queued, active, finished, and failed print workflows from one local command center.</p>
+        </article>
+        <article class="card">
+          <h3>Smart load balancing</h3>
+          <p>Route jobs to the shortest machine queue across your print farm. Balance and move work when queues drift.</p>
+        </article>
+        <article class="card">
+          <h3>Bambu Studio / OrcaSlicer linking</h3>
+          <p>Link design files from your PC. Paths show on queue cards. Drag queued jobs into Bambu Studio or OrcaSlicer (Chrome/Edge).</p>
+        </article>
+        <article class="card">
+          <h3>3MF and design file import</h3>
+          <p>Upload or drop <code>.3mf</code> / design files, attach them to jobs, and keep the real files on your computer — not on our servers.</p>
+        </article>
+        <article class="card">
+          <h3>Filament slots, inventory, accounting</h3>
+          <p>Track AMS-style slots, shelf stock, low-stock warnings, prices per kg, and consumption after complete or fail.</p>
+        </article>
+        <article class="card">
+          <h3>Cost, profit &amp; lag-rate timeline</h3>
+          <p>Material grams, machine hours, waste multiplier, profit records, and a lag-rate slider for realistic shop calendars.</p>
+        </article>
+      </div>
+    </section>
 
-  <footer>
-    Spool-Logic · 14-day free trial · $5.50/month · unlimited printers
+    <section class="wrap" id="sections">
+      <h2>Every section in the app</h2>
+      <p class="fine" style="margin-top:-0.4rem;margin-bottom:1rem;">Ten sidebar tools. One plan. Unlimited printers.</p>
+      <div class="grid">
+        <article class="card"><h3>Dashboard</h3><p>Queue status, active prints, filament alerts, and cost snapshots.</p></article>
+        <article class="card"><h3>Add Print</h3><p>Link files from your PC; path appears on the queue card.</p></article>
+        <article class="card"><h3>Queue Management</h3><p>Reorder, launch, complete, fail, retry — queued through failed.</p></article>
+        <article class="card"><h3>Multi-Printer Queues</h3><p>One queue per machine plus load balancing across the shop.</p></article>
+        <article class="card"><h3>Cost Analytics</h3><p>Dashboard and calculator: material, machine time, waste, lag rate.</p></article>
+        <article class="card"><h3>Profit &amp; Margins</h3><p>Enter revenue for a period; compare against computed print costs.</p></article>
+        <article class="card"><h3>Printer Management</h3><p>Add printers, set slot counts, track loaded filament and status.</p></article>
+        <article class="card"><h3>Filament Management</h3><p>Types, $/kg, bulk price adjust, and queued-job cost updates.</p></article>
+        <article class="card"><h3>Filament Accounting</h3><p>Shelf inventory, past usage, and switch recommendations.</p></article>
+        <article class="card"><h3>Settings</h3><p>Machine fee, waste, display, archive, tutorial replay, Terms &amp; Privacy.</p></article>
+      </div>
+    </section>
+
+    <section class="wrap" id="data">
+      <h2>Local-first by design</h2>
+      <div class="split">
+        <article class="card">
+          <h3>In the cloud</h3>
+          <p>Email, hashed password, trial/subscription status, and Stripe billing IDs — so you can sign in. That is all we host.</p>
+        </article>
+        <article class="card">
+          <h3>On this device</h3>
+          <p>Queue, printers, filament, settings, profit records, and file names/paths stay in your browser. Design files stay in a folder you choose on your PC. No cross-device sync.</p>
+        </article>
+      </div>
+      <p class="note">SpoolLogic is 3D printing queue software. It is not related to automotive turbo kits or diesel brands that use a similar name.</p>
+    </section>
+
+    <section class="wrap" id="pricing">
+      <h2>Pricing</h2>
+      <div class="price">
+        <div class="amount">$5.50 <small>/ month</small></div>
+        <p>14-day free trial · one plan · unlimited printers · cancel anytime. After trial, unpaid accounts stay view-only until you subscribe.</p>
+        <p class="fine">Start from the live app. Payments are processed by Stripe. Questions: <a href="mailto:3dprintingmanagemastertool@gmail.com">3dprintingmanagemastertool@gmail.com</a></p>
+        <p style="margin-bottom:0;"><a class="cta" href="https://spoollogic.streamlit.app/">Open the live app</a></p>
+      </div>
+    </section>
+
+    <section class="wrap" id="faq">
+      <h2>Common questions</h2>
+      <ul class="faq-list">
+        <li>
+          <h3>One hobby printer or a farm?</h3>
+          <p>Both. Same $5.50/month plan, unlimited printers, no per-machine fee.</p>
+        </li>
+        <li>
+          <h3>Is this the diesel turbo Spoologic brand?</h3>
+          <p>No. This is 3D print queue software. Unrelated to automotive turbo kits and unrelated to Spoolman.</p>
+        </li>
+        <li>
+          <h3>Where is my queue stored?</h3>
+          <p>In this browser. Design files stay on your PC. Cloud is login and billing only.</p>
+        </li>
+      </ul>
+      <p><a href="faq.html">Full FAQ</a> · <a href="llms-full.txt">Full AI briefing</a></p>
+    </section>
+
+    <section class="wrap">
+      <h2>Docs &amp; project links</h2>
+      <ul class="plain">
+        <li><a href="https://spoollogic.streamlit.app/">Live app (Streamlit)</a></li>
+        <li><a href="features.html">Feature list</a></li>
+        <li><a href="faq.html">FAQ</a> — one printer vs farm, pricing, Bambu, local-first, brand mix-up</li>
+        <li><a href="https://github.com/Spool-Logic/Spool-Logic/blob/main/TECHNICAL_SPECIFICATIONS.md">Technical specifications</a> — 464-item inventory; explains how it scales from one hobby printer to unlimited machines</li>
+        <li><a href="llms.txt">llms.txt</a> · <a href="llms-full.txt">llms-full.txt</a> — briefings for AI assistants</li>
+        <li><a href="https://github.com/Spool-Logic/Spool-Logic">GitHub repository</a></li>
+        <li><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <nav aria-label="Footer">
+        <a href="./">Home</a>
+        <a href="features.html">Features</a>
+        <a href="faq.html">FAQ</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="llms.txt">For AI</a>
+        <a href="https://github.com/Spool-Logic/Spool-Logic">GitHub</a>
+      </nav>
+      <p>SpoolLogic · 3D print software for everyone who 3D prints · one plan · unlimited printers · 14-day trial · $5.50/month</p>
+    </div>
   </footer>
 </body>
 </html>
